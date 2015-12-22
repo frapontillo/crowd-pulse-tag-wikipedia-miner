@@ -42,6 +42,10 @@ public class WikipediaMinerTagger extends IPlugin<Message, Message, VoidConfig> 
         return PLUGIN_NAME;
     }
 
+    @Override public IPlugin<Message, Message, VoidConfig> getInstance() {
+        return new WikipediaMinerTagger();
+    }
+
     @Override public VoidConfig getNewParameter() {
         return new VoidConfig();
     }
